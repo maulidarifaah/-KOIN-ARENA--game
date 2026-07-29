@@ -235,3 +235,21 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
   }
 }
+
+// Memuat gambar logo untuk background Canvas
+const bgLogo = new Image();
+bgLogo.src = 'logo1.jpeg'; // Ganti nama file sesuai logo yang dipilih (misal: logo1.jpeg, logo2.jpeg, dll.)
+
+function drawBackgroundLogo(ctx, canvasWidth, canvasHeight) {
+  if (bgLogo.complete) {
+    ctx.save();
+    ctx.globalAlpha = 0.15; // Tingkat transparansi (15%) agar tidak mengganggu koin/pemain
+    const size = 120; // Ukuran logo di canvas
+    const x = (canvasWidth - size) / 2;
+    const y = (canvasHeight - size) / 2;
+    ctx.drawImage(bgLogo, x, y, size, size);
+    ctx.restore();
+  }
+}
+
+// Panggil fungsi drawBackgroundLogo(ctx, 700, 400) di fungsi render/draw utama Anda.
