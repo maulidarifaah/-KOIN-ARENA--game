@@ -104,3 +104,26 @@ button:hover {
   background: #2ea043;
   transform: scale(1.04);
 }
+
+/* Container untuk 4 Logo Header */
+#logo-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #0d1117;
+  padding: 8px 12px;
+  border-bottom: 2px solid #1e293b;
+}
+
+/* Ukuran & Efek Glowing Logo */
+.game-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.4));
+  transition: transform 0.2s ease;
+}
+
+.game-logo:hover {
+  transform: scale(1.1);
+}
