@@ -104,3 +104,14 @@ button:hover {
   background: #2ea043;
   transform: scale(1.04);
 }
+
+/* Styling khusus untuk logo di menu utama */
+.menu-logo {
+  width: 80px;            /* Ukuran kecil logo */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;     /* Sudut membulat */
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Efek glow tipis */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
