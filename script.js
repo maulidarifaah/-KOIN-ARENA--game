@@ -260,3 +260,20 @@ const hitSound = new Audio('hit.mp3');
 
 // Opsional: atur volume jika terlalu keras (0.0 sampai 1.0)
 hitSound.volume = 0.5;
+
+
+// Contoh fungsi deteksi tabrakan
+function checkCollision() {
+  // Misal: Jika Player menyentuh Koin / Bertabrakan
+  if (isColliding(player, coin)) {
+    
+    // --- TAMBAHKAN DUA BARIS INI ---
+    hitSound.currentTime = 0; // Reset ke detik 0 agar suara bisa diputar berulang dengan cepat
+    hitSound.play();          // Putar suara tabrakan
+    // ------------------------------
+
+    // Logika kamu yang sudah ada (misal: tambah skor)
+    player.score += 10;
+    respawnCoin();
+  }
+}
