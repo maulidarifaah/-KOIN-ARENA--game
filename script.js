@@ -253,3 +253,10 @@ function drawBackgroundLogo(ctx, canvasWidth, canvasHeight) {
 }
 
 // Panggil fungsi drawBackgroundLogo(ctx, 700, 400) di fungsi render/draw utama Anda.
+
+
+// Load sound effect tabrakan
+const hitSound = new Audio('hit.mp3');
+
+// Opsional: atur volume jika terlalu keras (0.0 sampai 1.0)
+hitSound.volume = 0.5;
